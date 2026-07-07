@@ -1,0 +1,75 @@
+name: Fuel Additive Log
+options:
+  bundleIdPrefix: com.shimondeitel.additivelog
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+settings:
+  base:
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: "W7Q885Q59C"
+    CODE_SIGN_STYLE: Automatic
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    ENABLE_USER_SCRIPT_SANDBOXING: "YES"
+targets:
+  Fuel Additive Log:
+    type: application
+    platform: iOS
+    sources:
+      - path: Fuel Additive Log
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.additivelog
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_FILE: Fuel Additive Log/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_PREVIEWS: "YES"
+        GENERATE_INFOPLIST_FILE: "NO"
+  Fuel Additive LogTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Fuel Additive LogTests
+      - path: Fuel Additive Log.storekit
+    dependencies:
+      - target: Fuel Additive Log
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.additivelog.tests
+        GENERATE_INFOPLIST_FILE: "YES"
+        TARGETED_DEVICE_FAMILY: "1"
+  Fuel Additive LogUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: Fuel Additive LogUITests
+    dependencies:
+      - target: Fuel Additive Log
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.additivelog.uitests
+        GENERATE_INFOPLIST_FILE: "YES"
+        TARGETED_DEVICE_FAMILY: "1"
+schemes:
+  Fuel Additive Log:
+    build:
+      targets:
+        Fuel Additive Log: all
+        Fuel Additive LogTests: [test]
+        Fuel Additive LogUITests: [test]
+    run:
+      config: Debug
+      storeKitConfiguration: Fuel Additive Log.storekit
+    test:
+      config: Debug
+      storeKitConfiguration: Fuel Additive Log.storekit
+      targets:
+        - Fuel Additive LogTests
+        - Fuel Additive LogUITests
+    archive:
+      config: Release

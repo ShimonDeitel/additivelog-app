@@ -1,0 +1,27 @@
+{
+  "identifier" : "Fuel Additive Log",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "com.shimondeitel.additivelog.pro",
+      "localizations" : [
+        {
+          "description" : "Unlock Multi-additive schedule with reminder intervals",
+          "displayName" : "Fuel Additive Log Pro",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.shimondeitel.additivelog.pro",
+      "referenceName" : "Fuel Additive Log Pro",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {},
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
